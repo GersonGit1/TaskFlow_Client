@@ -38,6 +38,13 @@ export default function RegisterView() {
   return (
     <>
       <h1 className="text-5xl font-black text-white text-center">Crear Cuenta</h1>
+      <div className="mt-5 rounded-xl p-4 text-red-500 font-bold  w-xs sm:w-lg bg-amber-200">
+        <p>El envío de emails de verificación está en proceso de configuración.
+          Si desea acceder al demo, use las credenciales de prueba indicadas en el {''}
+          <a className="text-blue-400"
+            href="https://portfolio-production-b4c2.up.railway.app/projects/TaskFlow">portafolio</a>
+        </p>
+      </div>
       <p className="text-2xl font-light text-white mt-5 text-center">
         Llena el formulario para {''}
         <span className=" text-fuchsia-500 font-bold"> crear tu cuenta</span>

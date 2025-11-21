@@ -24,7 +24,7 @@ export async function ConfirmAccount(formData: ConfirmToken) {
         if (isAxiosError(error)) {
             return {
                 data: null,
-                error: error.response?.data?.error || 'Error al crear la cuenta, intenta de nuevo'
+                error: error.response?.data?.error || 'Error al confirmar la cuenta, intenta de nuevo'
             }
         }
         return {
@@ -67,7 +67,7 @@ export async function ForgotPassword(formData: ForgotPasswordForm) {
         return data;
     } catch (error) {        
         if (isAxiosError(error)) {
-            throw new Error(error.response?.data?.error ||'Error al crear la cuenta, intenta de nuevo');          
+            throw new Error(error.response?.data?.error ||'Error al restablecer password, intenta de nuevo');          
         }
     }
 }
@@ -79,7 +79,7 @@ export async function ValidateToken(formData: ConfirmToken) {
         return data;
     } catch (error) {        
         if (isAxiosError(error)) {
-            throw new Error(error.response?.data?.error ||'Error al crear la cuenta, intenta de nuevo');          
+            throw new Error(error.response?.data?.error ||'Error al validar token, intenta de nuevo');          
         }
     }
 }
@@ -92,7 +92,7 @@ export async function UpdatePasswordWithToken({formData, token}: {formData: NewP
         return data;
     } catch (error) {        
         if (isAxiosError(error)) {
-            throw new Error(error.response?.data?.error ||'Error al crear la cuenta, intenta de nuevo');          
+            throw new Error(error.response?.data?.error ||'Error al actualizar password, intenta de nuevo');          
         }
     }
 }
@@ -106,7 +106,7 @@ export async function getUser(){
         }
     } catch (error) {
         if (isAxiosError(error)) {
-            throw new Error(error.response?.data?.error ||'Error al crear la cuenta, intenta de nuevo');          
+            throw new Error(error.response?.data?.error ||'Error al obtener el usuario, intenta de nuevo');          
         }
     }
 }
@@ -118,7 +118,7 @@ export async function checkPassword(formData : checkPasswordForm){
         return data;
     } catch (error) {
         if (isAxiosError(error)) {
-            throw new Error(error.response?.data?.error ||'Error al crear la cuenta, intenta de nuevo');          
+            throw new Error(error.response?.data?.error ||'Error al verificar password, intenta de nuevo');          
         }
     }
 }
